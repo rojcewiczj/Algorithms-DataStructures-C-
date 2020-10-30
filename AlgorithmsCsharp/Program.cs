@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AlgorithmsCsharp.SingleLinkedList;
+using Microsoft.VisualBasic;
+using System;
 
 namespace AlgorithmsCsharp
 {
@@ -6,7 +8,12 @@ namespace AlgorithmsCsharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            LinkedList myList = new LinkedList();
+            myList.addToEnd(4);
+            myList.addToEnd(7);
+            myList.addToEnd(3);
+            myList.addToTheBeginning(2);
+            myList.Print();
         }
     }
 }
