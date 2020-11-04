@@ -8,9 +8,10 @@ namespace AlgorithmsCsharp
     {
         static void Main(string[] args)
         {
-            Anagrams.AnagramFinder anag = new Anagrams.AnagramFinder("ifailuhkqq");
+            int[] array = {1,2,3,4,5,3,3,2 };
+            LargestRectangle.RectangleFinder RecFind = new LargestRectangle.RectangleFinder(array);
 
-            Console.WriteLine(anag.Find());
+            Console.WriteLine(RecFind.Find());
         }
     }
 }
