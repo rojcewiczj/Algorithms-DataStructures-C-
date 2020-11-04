@@ -8,9 +8,9 @@ namespace AlgorithmsCsharp
     {
         static void Main(string[] args)
         {
-            TwoStrings.TwoStringsFinder Finder = new TwoStrings.TwoStringsFinder("hi", "world");
+            Anagrams.AnagramFinder anag = new Anagrams.AnagramFinder("ifailuhkqq");
 
-            Console.WriteLine(Finder.Find());
+            Console.WriteLine(anag.Find());
         }
     }
 }
