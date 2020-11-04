@@ -8,9 +8,9 @@ namespace AlgorithmsCsharp
     {
         static void Main(string[] args)
         {
-            Hourglass.HourGlassAdder hourglass = new Hourglass.HourGlassAdder();
-            Console.WriteLine(hourglass.FindMax());
-            
+            TwoStrings.TwoStringsFinder Finder = new TwoStrings.TwoStringsFinder("hi", "world");
+
+            Console.WriteLine(Finder.Find());
         }
     }
 }
