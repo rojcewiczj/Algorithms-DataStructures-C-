@@ -8,10 +8,8 @@ namespace AlgorithmsCsharp
     {
         static void Main(string[] args)
         {
-            int[] array = {1,2,3,4,5,3,3,2 };
-            LargestRectangle.RectangleFinder RecFind = new LargestRectangle.RectangleFinder(array);
+            Graphs.Graph graph = new Graphs.Graph();
 
-            Console.WriteLine(RecFind.Find());
         }
     }
 }
