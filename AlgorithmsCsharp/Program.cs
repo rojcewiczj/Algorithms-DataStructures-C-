@@ -8,8 +8,9 @@ namespace AlgorithmsCsharp
     {
         static void Main(string[] args)
         {
-            Graphs.Graph graph = new Graphs.Graph();
+            Arrays.MinSwap lineChaoes = new Arrays.MinSwap(new int[] {2,3,4,1,5});
 
+            Console.WriteLine(" {0} ", lineChaoes.FindMinSwap());
         }
     }
 }
