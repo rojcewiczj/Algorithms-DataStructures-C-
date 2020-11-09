@@ -24,8 +24,8 @@ namespace AlgorithmsCsharp.Arrays
                 {
                     int toSwitch = _nums[_nums[i] - 1];
                     int currentNum = _nums[i];
-                    _nums[i] = toSwitch;
                     _nums[_nums[i] - 1] = currentNum;
+                    _nums[i] = toSwitch;
                     minSwap += 1;
                     Console.WriteLine("{0} -- {1} // ", toSwitch, currentNum);
                 }
