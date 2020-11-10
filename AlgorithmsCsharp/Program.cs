@@ -1,4 +1,5 @@
 ﻿using AlgorithmsCsharp.SingleLinkedList;
+using AlgorithmsCsharp.WindowSlide;
 using Microsoft.VisualBasic;
 using System;
 
@@ -8,9 +9,9 @@ namespace AlgorithmsCsharp
     {
         static void Main(string[] args)
         {
-            Arrays.MinSwap lineChaoes = new Arrays.MinSwap(new int[] {1,3,5,2,4,6,7});
+            WindowSlide.SlidingWindow slider = new WindowSlide.SlidingWindow(new int[] { 100, 200, 300, 400 }, 2);
+            slider.returnLargest();
 
-            Console.WriteLine(" {0} ", lineChaoes.FindMinSwap());
         }
     }
 }
