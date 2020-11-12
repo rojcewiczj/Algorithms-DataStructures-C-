@@ -9,8 +9,8 @@ namespace AlgorithmsCsharp
     {
         static void Main(string[] args)
         {
-            WindowSlide.SlidingWindow slider = new WindowSlide.SlidingWindow(new int[] { 100, 200, 300, 400 }, 2);
-            slider.returnLargest();
+            ValidString.ValidString validator = new ValidString.ValidString("abcdefghhgfedecba");
+            Console.WriteLine(validator.returnValid());
 
         }
     }
