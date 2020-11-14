@@ -1,6 +1,7 @@
 ﻿using AlgorithmsCsharp.SingleLinkedList;
 using AlgorithmsCsharp.WindowSlide;
 using Microsoft.VisualBasic;
+using AlgorithmsCsharp.ReverseWords;
 using System;
 
 namespace AlgorithmsCsharp
@@ -9,9 +10,9 @@ namespace AlgorithmsCsharp
     {
         static void Main(string[] args)
         {
-            ValidString.ValidString validator = new ValidString.ValidString("abcdefghhgfedecba");
-            Console.WriteLine(validator.returnValid());
+            reverseWords rev = new reverseWords("hello my long lost friend!");
 
+            Console.WriteLine(rev.reversedAllWords());
         }
     }
 }
