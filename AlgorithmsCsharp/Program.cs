@@ -1,7 +1,8 @@
 ﻿using AlgorithmsCsharp.SingleLinkedList;
 using AlgorithmsCsharp.WindowSlide;
-using Microsoft.VisualBasic;
 using AlgorithmsCsharp.ReverseWords;
+using Microsoft.VisualBasic;
+using AlgorithmsCsharp.RecursionPractice;
 using System;
 
 namespace AlgorithmsCsharp
@@ -10,9 +11,10 @@ namespace AlgorithmsCsharp
     {
         static void Main(string[] args)
         {
-            reverseWords rev = new reverseWords("hello my long lost friend!");
+            reverseString rev = new reverseString("holla");
 
-            Console.WriteLine(rev.reversedAllWords());
+            rev.reverseThis();
+            Console.WriteLine(rev.reversed_string);
         }
     }
 }
