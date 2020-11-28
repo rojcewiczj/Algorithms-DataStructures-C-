@@ -4,7 +4,7 @@ using AlgorithmsCsharp.ReverseWords;
 using Microsoft.VisualBasic;
 using AlgorithmsCsharp.RecursionPractice;
 using AlgorithmsCsharp.FindString;
-using AlgorithmsCsharp.BinarySearch;
+using AlgorithmsCsharp.SearchAndSort;
 using System;
 
 namespace AlgorithmsCsharp
@@ -13,9 +13,9 @@ namespace AlgorithmsCsharp
     {
         static void Main(string[] args)
         {
-            BSearch rev = new BSearch(new int[]{ 1, 2, 3, 4, 5, 6, 7, 8, 9 ,10 }, 8);
+            SelectionSort rev = new SelectionSort(new int[]{ 1, 5, 3, 9, 4, 32, 7, 47, 33 ,10 });
 
-            Console.WriteLine(rev.BSearcher());
+            rev.Sort();
         }
     }
 }

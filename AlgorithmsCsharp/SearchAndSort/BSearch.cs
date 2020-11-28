@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AlgorithmsCsharp.BinarySearch
+namespace AlgorithmsCsharp.SearchAndSort
+
 {
     class BSearch
     {
