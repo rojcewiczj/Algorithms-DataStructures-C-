@@ -13,7 +13,7 @@ namespace AlgorithmsCsharp
     {
         static void Main(string[] args)
         {
-            SelectionSort rev = new SelectionSort(new int[]{ 1, 5, 3, 9, 4, 32, 7, 47, 33 ,10 });
+            InsertionSort rev = new InsertionSort(new int[]{ 3, 4, 8, 2, 11, 7, 1 });
 
             rev.Sort();
         }
