@@ -40,9 +40,9 @@ namespace AlgorithmsCsharp.DataStructures
             {
                 int left_child_index = (2 * index) + 1;
                 int right_child_index = (2 * index) + 2;
-                int left_child = new int { };
-                int right_child = new int { };
-                int swap = new int{ };
+                int left_child = 0;
+                int right_child = 0;
+                int swap = 0;
                 if (left_child_index < length)
                 {
                     left_child = list[left_child_index];
@@ -51,17 +51,26 @@ namespace AlgorithmsCsharp.DataStructures
                         swap = left_child_index;
                     }
                 }
-                if(right_child_index < length)
+                if (right_child_index < length)
                 {
-                     right_child = list[right_child_index];
+                    right_child = list[right_child_index];
                     if (right_child > element)
-                    {   
+                    {
 
-                        if(right_child > left_child)
+                        if (right_child > left_child || left_child == 0)
                         {
                             swap = right_child_index;
                         }
                     }
+                }
+                if (swap == 0)
+                {
+                    break;
+                }
+                else
+                {
+                    list[index] = list[swap];
+                    index = swap;
                 }
             }
 
