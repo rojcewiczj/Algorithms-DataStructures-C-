@@ -16,17 +16,17 @@ namespace AlgorithmsCsharp
 
         static void Main(string[] args)
         {
-            BSTTree tree = new BSTTree();
+            MaxBinaryHeap heap = new MaxBinaryHeap();
 
-            tree.insert(1);
-            tree.insert(2);
-            tree.insert(4);
-            tree.insert(10);
-            tree.insert(3);
-            tree.insert(14);
-            tree.insert(5);
-            tree.insert(6);
-            tree.print_tree();
+            heap.insert(1);
+            heap.insert(2);
+            heap.insert(4);
+            heap.insert(10);
+            heap.insert(3);
+            heap.insert(14);
+            heap.insert(5);
+            heap.insert(6);
+            heap.print();
 
         }
     }
