@@ -6,6 +6,7 @@ using AlgorithmsCsharp.RecursionPractice;
 using AlgorithmsCsharp.FindString;
 using AlgorithmsCsharp.SearchAndSort;
 using AlgorithmsCsharp.DataStructures;
+using AlgorithmsCsharp.Arrays;
 using System;
 using System.Collections.Generic;
 
@@ -16,17 +17,9 @@ namespace AlgorithmsCsharp
 
         static void Main(string[] args)
         {
+            AlmostDuplicate check = new AlmostDuplicate();
 
-            Graph graph = new Graph();
-
-            graph.Add("tokyo", "bejing");
-            graph.Add("paris", "rome");
-            graph.Add("london", "new york");
-            graph.Add("london", "rome");
-            graph.Add("paris", "bejing");
-            graph.traversal("tokyo","new york");
-            graph.print();
-
+            check.check();
 
         }
     }
