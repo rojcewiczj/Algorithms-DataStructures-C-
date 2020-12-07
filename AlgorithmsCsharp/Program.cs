@@ -16,11 +16,18 @@ namespace AlgorithmsCsharp
 
         static void Main(string[] args)
         {
-   
-          
-            Console.WriteLine(HashTable.Hash("johas"));
 
-           
+            Graph graph = new Graph();
+
+            graph.Add("tokyo", "bejing");
+            graph.Add("paris", "rome");
+            graph.Add("london", "new york");
+            graph.Add("london", "rome");
+            graph.Add("paris", "bejing");
+            graph.traversal("tokyo","new york");
+            graph.print();
+
+
         }
     }
 }
