@@ -17,9 +17,9 @@ namespace AlgorithmsCsharp
 
         static void Main(string[] args)
         {
-            AlmostDuplicate check = new AlmostDuplicate();
+            MaxSlidingWindow window = new MaxSlidingWindow();
 
-            check.check();
+            window.findMax();
 
         }
     }
