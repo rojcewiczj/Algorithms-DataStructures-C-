@@ -17,9 +17,7 @@ namespace AlgorithmsCsharp
 
         static void Main(string[] args)
         {
-            MaxSlidingWindow window = new MaxSlidingWindow();
-
-            window.findMax();
+            MakeDivisible.MakeDiv();
 
         }
     }
