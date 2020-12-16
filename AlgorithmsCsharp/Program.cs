@@ -17,7 +17,7 @@ namespace AlgorithmsCsharp
 
         static void Main(string[] args)
         {
-            MakeDivisible.MakeDiv();
+            StringToInteger.MakeInt();
 
         }
     }
