@@ -17,8 +17,7 @@ namespace AlgorithmsCsharp
 
         static void Main(string[] args)
         {
-            StringToInteger.MakeInt();
-
+            ValidSubsequence.Valid();
         }
     }
 }
