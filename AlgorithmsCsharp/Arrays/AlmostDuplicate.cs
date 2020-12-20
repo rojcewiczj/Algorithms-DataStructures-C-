@@ -28,7 +28,7 @@ namespace AlgorithmsCsharp.Arrays
 
         public void check()
         {
-            bool works = false;
+          
             List<int> current_window = new List<int>();
             List<int> differences = new List<int>();
             int last = k;

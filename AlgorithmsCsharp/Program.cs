@@ -17,7 +17,7 @@ namespace AlgorithmsCsharp
 
         static void Main(string[] args)
         {
-            ValidSubsequence.Valid();
+            MinJumps.jumps();
         }
     }
 }
