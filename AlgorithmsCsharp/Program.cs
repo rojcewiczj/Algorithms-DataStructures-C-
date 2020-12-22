@@ -7,6 +7,7 @@ using AlgorithmsCsharp.FindString;
 using AlgorithmsCsharp.SearchAndSort;
 using AlgorithmsCsharp.DataStructures;
 using AlgorithmsCsharp.Arrays;
+using AlgorithmsCsharp.ValidString;
 using System;
 using System.Collections.Generic;
 
@@ -17,7 +18,8 @@ namespace AlgorithmsCsharp
 
         static void Main(string[] args)
         {
-            MinJumps.jumps();
+
+            RepForSub.CanBe();
         }
     }
 }
