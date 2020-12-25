@@ -19,7 +19,19 @@ namespace AlgorithmsCsharp
         static void Main(string[] args)
         {
 
-            RepForSub.CanBe();
+            MatrixAndGraph map = new MatrixAndGraph(20, 20);
+
+            foreach(KeyValuePair<string, List<string>> kvp in map.connections)
+            {
+                Console.WriteLine(" ");
+                Console.Write("{0} : ", kvp.Key);
+                foreach (string neighbor in kvp.Value)
+                {
+                    Console.Write(" {0} ", neighbor);
+                }
+
+            }
+
         }
     }
 }
