@@ -6,16 +6,17 @@ namespace AlgorithmsCsharp.DataStructures
 {
     class MatrixAndGraph
     {
-        public static int _x = 0;
 
-        public static int _y = 0;
+        public int[,] matrix;
 
-        public static int[,] matrix = new int[_x, _y];
+        public int _x;
 
-        public  Dictionary<string, List<string>> connections;
+        public int _y;
+
+        public Dictionary<string, List<string>> connections = new Dictionary<string, List<string>>();
 
 
-        public static List<string> neighbors(int ex, int why)
+        public List<string> neighbors(int ex, int why)
         {
             List<string> neigh = new List<string>();
             for (int x = ex + 1; x > ex - 2 && x > -1 && x < _x + 1; x--)
@@ -29,12 +30,16 @@ namespace AlgorithmsCsharp.DataStructures
         }
         public MatrixAndGraph(int X, int Y)
         {
+            Console.WriteLine("bleep");
             _x = X;
+
             _y = Y;
 
-            for (int x = 0; x < _x; x++)
+            matrix = new int[X, Y];
+
+            for (int x = 0; x < X; x++)
             {
-                for (int y = 0; y < _y; y++)
+                for (int y = 0; y < Y; y++)
                 {
 
                     connections[string.Format("{0},{1}", x, y)] = neighbors(x, y);

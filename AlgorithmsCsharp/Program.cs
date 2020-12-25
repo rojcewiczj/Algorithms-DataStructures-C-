@@ -1,10 +1,4 @@
-﻿using AlgorithmsCsharp.SingleLinkedList;
-using AlgorithmsCsharp.WindowSlide;
-using AlgorithmsCsharp.ReverseWords;
-using Microsoft.VisualBasic;
-using AlgorithmsCsharp.RecursionPractice;
-using AlgorithmsCsharp.FindString;
-using AlgorithmsCsharp.SearchAndSort;
+﻿
 using AlgorithmsCsharp.DataStructures;
 using AlgorithmsCsharp.Arrays;
 using AlgorithmsCsharp.ValidString;
@@ -18,12 +12,15 @@ namespace AlgorithmsCsharp
 
         static void Main(string[] args)
         {
+            Console.WriteLine("hello");
+
 
             MatrixAndGraph map = new MatrixAndGraph(20, 20);
+            Console.WriteLine("hello");
 
-            foreach(KeyValuePair<string, List<string>> kvp in map.connections)
+            foreach (KeyValuePair<string, List<string>> kvp in map.connections)
             {
-                Console.WriteLine(" ");
+                Console.WriteLine("hellllooo");
                 Console.Write("{0} : ", kvp.Key);
                 foreach (string neighbor in kvp.Value)
                 {
