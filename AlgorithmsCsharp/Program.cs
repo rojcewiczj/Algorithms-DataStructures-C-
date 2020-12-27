@@ -12,22 +12,18 @@ namespace AlgorithmsCsharp
 
         static void Main(string[] args)
         {
-            Console.WriteLine("hello");
+           
 
 
             MatrixAndGraph map = new MatrixAndGraph(20, 20);
-            Console.WriteLine("hello");
 
-            foreach (KeyValuePair<string, List<string>> kvp in map.connections)
+
+          
+            foreach(string local in map.Trip("1,2","10,11"))
             {
-                Console.WriteLine("hellllooo");
-                Console.Write("{0} : ", kvp.Key);
-                foreach (string neighbor in kvp.Value)
-                {
-                    Console.Write(" {0} ", neighbor);
-                }
-
+                Console.Write("- {0} -", local);
             }
+
 
         }
     }
