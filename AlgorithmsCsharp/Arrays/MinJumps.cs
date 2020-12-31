@@ -20,7 +20,7 @@ namespace AlgorithmsCsharp.Arrays
             List<int> list = new List<int>();
 
             int i = 0;
-
+            
             while (i != x)
             {
                 while (i < x)

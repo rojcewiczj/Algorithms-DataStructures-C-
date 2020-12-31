@@ -12,17 +12,27 @@ namespace AlgorithmsCsharp
 
         static void Main(string[] args)
         {
-           
 
-
-            MatrixAndGraph map = new MatrixAndGraph(20, 20);
-
-
-          
-            foreach(string local in map.Trip("1,2","10,11"))
+            LList list = new LList();
+            int j = 1;
+            for(int i = 1; i < 50; i++)
             {
-                Console.Write("- {0} -", local);
+                if (j == 10)
+                {
+                    j = 1;
+                    list.push(j);
+                    j += 1;
+
+                }
+                else
+                {
+                    list.push(j);
+                    j += 1;
+                    
+                }
             }
+            list.patternMarker();
+            list.print();
 
 
         }
