@@ -12,71 +12,84 @@ namespace AlgorithmsCsharp.DataStructures
         public BSTTree() { }
         public void insert(int value)
         {
+            bool inserted = false;
             BSTNode new_node = new BSTNode(value);
-
-           
-
-            if (root is null)
+            if (root == null)
             {
-    
                 root = new_node;
             }
             else
-            {
-                BSTNode current = root;
-                bool done = false;
-                while (done is false) {
-                    if (new_node.value < current.value)
+            {     
+               BSTNode current = root;
+               while(inserted == false) {
+                  
+                    if(value < current.value)
                     {
-                        if (current.left is null)
+                        if (current.left == null)
                         {
                             current.left = new_node;
-                            done = true;
+                            inserted = true;
                         }
                         else
                         {
                             current = current.left;
-                            
                         }
+                   
+                    
                     }
-                    else if (new_node.value > current.value)
+                    else if(value > current.value)
                     {
-                        if (current.right is null)
+                        if (current.right == null)
                         {
                             current.right = new_node;
-                            done = true;
+                            inserted = true;
                         }
                         else
                         {
                             current = current.right;
-
                         }
-                    }
-
+                    
+                    } 
                 }
-            } }
+            }
+        
+        
+        
+        }
 
         public void print_tree()
-        {
-            BSTNode current = root;
+        {   
+         
             Stack<BSTNode> stack = new Stack<BSTNode>();
-            stack.Push(current);
-            while (stack.Count > 0)
+            stack.Push(root);
+            Stack<string> direct = new Stack<string>();
+            direct.Push("root");
+            while(stack.Count > 0)
             {
-                current = stack.Pop();
-                Console.WriteLine("{0}", current.value);
-              
+                BSTNode current = stack.Pop();
+                string direction = direct.Pop();
+
+                Console.WriteLine("{0} : {1}", direction, current.value);
+
+                if (current.right != null) 
+                {
+
+                    stack.Push(current.right);
+                    direct.Push("right");
+                }
+
                 if (current.left != null)
                 {
-                   
-                    stack.Push(current.left);
-                }  if (current.right != null)
-                {
-                    stack.Push(current.right);
-                }
-                Console.WriteLine(" ");
 
+                    stack.Push(current.left);
+                    direct.Push("left");
+                
+
+                }
+
+                
             }
+
             
 
         }
