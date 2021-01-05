@@ -6,9 +6,9 @@ namespace AlgorithmsCsharp.Arrays
 {
     class FindAllTriplets
     {
-        public static List<int> list = new List<int> { 1,3,9,9,27,81 };
+        public static List<int> list = new List<int> { 1,2,4,8,16,32,64,64,64,64,64,64 };
 
-        public static int n = 3;
+        public static int n = 2;
         public static void Find()
         {
             Dictionary<int, List<int>> Before = new Dictionary<int, List<int>>();
@@ -38,8 +38,6 @@ namespace AlgorithmsCsharp.Arrays
                 bool firstCheck = false;
                 bool thirdCheck = false;
 
-                List<int> first = new List<int>();
-                List<int> third = new List<int>();
 
                 if (!Before.ContainsKey(list[i - 1]))
                 {   
@@ -54,23 +52,20 @@ namespace AlgorithmsCsharp.Arrays
                 int current = list[i];
                 if (Before.ContainsKey(current / n))
                 {   
-                    foreach(int index in Before[current / n]) { 
-                    first.Add(index);
-                    }
+                   
                     firstCheck = true;
                 }
                 if (After.ContainsKey(current * n))
                 {
-                    foreach (int index in After[current * n])
-                    {
-                        third.Add(index);
-                    }
+                    
                     thirdCheck = true;
                 }
                 if(firstCheck && thirdCheck)
                 {
                     int k = 0;
                     int j = 0;
+                    List<int> first = Before[current / n];
+                    List<int> third = After[current * n];
 
                     while(k < first.Count)
                     {
