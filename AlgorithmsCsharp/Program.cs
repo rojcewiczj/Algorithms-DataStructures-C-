@@ -14,6 +14,8 @@ namespace AlgorithmsCsharp
         {
 
             PrintPath.insert();
+
+            PrintPath.traverse();
         }
     }
 }
