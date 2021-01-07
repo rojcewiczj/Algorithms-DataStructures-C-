@@ -19,6 +19,7 @@ namespace AlgorithmsCsharp.Arrays
         public static int goal_y = 7;
 
 
+
         public static void insert()
         {
             for (int i = 0; i < n; i++)
@@ -42,65 +43,92 @@ namespace AlgorithmsCsharp.Arrays
             }
         }
 
-        public static void traverse()
+        public static int traverse()
         {
-            List<string> path = new List<string>();
-            int x = start_x;
-            int y = start_y;
-            bool x_switch = false;
-            bool y_switch = true;
-            path.Add(string.Format("{0},{1}", x, y));
+            int current_c = 0;
+            List<string> visited = new List<string>();
+            Queue<List<int>> queue = new Queue<List<int>>();
+            List<int> start = new List<int> { start_x, start_y, current_c };
+            queue.Enqueue(start);
 
-            while(x != goal_x || y != goal_y)
-            {   
-                if (Matrix[x].Contains("X") && y == start_y)
-                {   
+            List<List<int>> moves = new List<List<int>>();
+            List<int> down = new List<int> { 1, 0 };
+            List<int> up = new List<int> { -1, 0 };
+            List<int> right = new List<int> { 0, 1 };
+            List<int> left = new List<int> { 0, -1 };
 
-                       if(x < n - 1) { 
-                        x += 1;
-                       }
-                        Console.WriteLine(x);
-                    Console.WriteLine(Matrix[x].Contains("X"));
-                    
-                }
-                else if ( y != goal_y)
-                {  
-                    if(path.Count == 1)
-                    {
-                        path.Add(string.Format("{0},{1}", x, y));
-                    }
-                    y += 1;
+            moves.Add(down);
+            moves.Add(up);
+            moves.Add(right);
+            moves.Add(left);
 
-
-                }
-                else
-                {
-                    if(path.Count == 2)
-                    {
-                        path.Add(string.Format("{0},{1}", x, y));
-                    }
-                    if (x < goal_x)
-                    {
-                        x -= 1;
-                    }
-                    else
-                    {
-                        x += 1;
-                    }
-                }
-
-            }
-            path.Add(string.Format("{0},{1}", x, y));
-            
-            foreach(string location in path)
+            while (queue.Count > 0)
             {
-                Console.WriteLine(location);
+                List<int> current_location = queue.Dequeue();
+             
+                int current_x = current_location[0];
+                int current_y = current_location[1];
+                current_c = current_location[2];
+                current_c += 1;
+                Console.WriteLine("current location : {0},{1} -- count : {2}", current_x, current_y, current_c);
+                foreach(List<int> move in moves)
+                {
+                    int x = current_x;
+                    int y = current_y;
+                    Console.WriteLine("location : {0},{1}", x, y);
+              
+                    while (true)
+                    {   
+                        x = x + move[0];
+                        y = y + move[1];
+                        string local = string.Format("{0},{1}", x, y);
+                      
+                        
+                        Console.WriteLine("location after moving: {0},{1}", x, y);
+                        if (0 <= x && x < n && 0 <= y && y < n && Matrix[x][y] == ".")
+                        {
+                            
+                            if (x == goal_x && y == goal_y)
+                            {   Console.WriteLine(current_c);
+                                Console.WriteLine("reached goal");
+                                return current_c;
+                            }
+                            else if (!visited.Contains(local))
+                            {
+                              
+                              
+                                Console.WriteLine("adding {0} to visited", string.Format("{0},{1}", x, y));
+                                visited.Add(string.Format("{0},{1}", x, y));
+                                Console.WriteLine("adding {0},{1},{2} to the queue", x, y, current_c);
+                                List<int> new_local = new List<int> { x, y, current_c };
+                                queue.Enqueue(new_local);
+                            }
+                           
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+
+                }
             }
+            
+            return -1;
+
+
 
 
 
         }
 
 
+
+
     }
-}
+
+    }
+
+        
+
+       

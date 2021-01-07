@@ -6,7 +6,7 @@ namespace AlgorithmsCsharp.Arrays
 {
     class Valid_Brackets
     {
-        public static string str = "([{{}}])";
+        public static string str = "(())";
 
         public static bool check()
         {
@@ -33,6 +33,11 @@ namespace AlgorithmsCsharp.Arrays
                     
                 }
 
+            }
+
+            if(stack.Count != 0)
+            {
+                return false;
             }
             return true;
             
