@@ -70,6 +70,7 @@ namespace AlgorithmsCsharp.Arrays
                 int current_y = current_location[1];
                 current_c = current_location[2];
                 current_c += 1;
+                Console.WriteLine(current_c);
                 Console.WriteLine("current location : {0},{1} -- count : {2}", current_x, current_y, current_c);
                 foreach(List<int> move in moves)
                 {

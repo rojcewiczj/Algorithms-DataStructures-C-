@@ -13,9 +13,7 @@ namespace AlgorithmsCsharp
         static void Main(string[] args)
         {
 
-            PrintPath.insert();
-
-            PrintPath.traverse();
+            SumPerm.Find();
         }
     }
 }
