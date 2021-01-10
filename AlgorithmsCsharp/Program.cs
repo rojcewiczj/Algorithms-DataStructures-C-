@@ -13,7 +13,7 @@ namespace AlgorithmsCsharp
         static void Main(string[] args)
         {
 
-            SumPerm.Find();
+            MaxSumPermutations.Find();
         }
     }
 }
