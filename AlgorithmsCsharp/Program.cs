@@ -2,6 +2,7 @@
 using AlgorithmsCsharp.DataStructures;
 using AlgorithmsCsharp.Arrays;
 using AlgorithmsCsharp.ValidString;
+using AlgorithmsCsharp.FindString;
 using System;
 using System.Collections.Generic;
 
@@ -13,7 +14,6 @@ namespace AlgorithmsCsharp
         static void Main(string[] args)
         {
             MaxSumPermutations.Find();
-
           
             
         }
