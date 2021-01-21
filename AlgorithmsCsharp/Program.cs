@@ -12,9 +12,9 @@ namespace AlgorithmsCsharp
     {
 
         static void Main(string[] args)
-        {
-            OverlapingSub.Find();
-            
+        {   
+           Console.Write(GasStation.Find());
+
             
         }
     }
