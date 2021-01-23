@@ -13,7 +13,10 @@ namespace AlgorithmsCsharp
 
         static void Main(string[] args)
         {   
-           Console.Write(GasStation.Find());
+           foreach(List<int> pair in PaliPairs.Find())
+            {
+                Console.Write(" [{0},{1}] ", pair[0], pair[1]);
+            }
 
             
         }
