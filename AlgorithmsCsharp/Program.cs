@@ -13,7 +13,7 @@ namespace AlgorithmsCsharp
 
         static void Main(string[] args)
         {   
-           Console.WriteLine(WordsAndKeypads.Output());
+           Console.WriteLine(string.Join("\t", AnagramStarts.Find())); 
             
         }
     }
