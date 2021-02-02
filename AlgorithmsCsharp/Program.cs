@@ -12,17 +12,9 @@ namespace AlgorithmsCsharp
     {
 
         static void Main(string[] args)
-        {   
-           foreach(List<int> list in GroupSizes.Find())
-            {
-                Console.Write("[");
-                foreach(int index in list)
-                {
-                    Console.Write(" {0} ", index);
-                }
-                Console.Write("]");
-                Console.WriteLine("");
-            }
+        {
+
+            Console.WriteLine(Boats.NumRescueBoats());
             
         }
     }
