@@ -14,7 +14,7 @@ namespace AlgorithmsCsharp
         static void Main(string[] args)
         {
 
-            Console.WriteLine(AggroCows.Max_distance());
+            Console.WriteLine(SubstringCap.Find());
             
         }
     }
