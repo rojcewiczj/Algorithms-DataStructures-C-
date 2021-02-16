@@ -40,21 +40,27 @@ namespace AlgorithmsCsharp.Arrays
                
                 for(int i = k; i < str.Length; i++)
                 {
-                    substring.Remove(0, 1);
+                    substring.Remove(0,1);
                     substring += str[i];
+                    Console.WriteLine(substring);
                     if (Char.IsUpper(str, i))
                     {
                         caps.Add(str[i]);
+                        
                         worth_check = true;
                     }
-                } 
-                if (worthReturn(worth_check, caps, substring))
+                   
+                    if (worthReturn(worth_check, caps, substring))
                     {
+                        
                         return substring.Length;
-                    }
+                    }  
+                    worth_check = false;
+                } 
+               
 
                 caps = new List<char>();
-                worth_check = false;
+              
                 k += 1;
 
 
@@ -77,7 +83,7 @@ namespace AlgorithmsCsharp.Arrays
                     if (substring.Contains(Char.ToLower(cap)))
                     {
                         count -= 1;
-                        if(count <= 1)
+                        if(count <1)
                         {
                             return true;
                         }

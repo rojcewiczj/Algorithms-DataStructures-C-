@@ -14,7 +14,7 @@ namespace AlgorithmsCsharp
         static void Main(string[] args)
         {
 
-            Console.WriteLine(SubstringCap.Find());
+            Console.WriteLine(RiverSizes.RiverSizesFind());
             
         }
     }
