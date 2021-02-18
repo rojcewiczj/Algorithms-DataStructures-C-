@@ -14,7 +14,11 @@ namespace AlgorithmsCsharp
         static void Main(string[] args)
         {
 
-            Console.WriteLine(RiverSizes.RiverSizesFind());
+        
+            foreach(int size in RiverSizes.RiverSizesFind())
+            {
+                Console.WriteLine(size);
+            }
             
         }
     }
