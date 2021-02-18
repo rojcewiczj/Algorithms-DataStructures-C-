@@ -15,10 +15,9 @@ namespace AlgorithmsCsharp
         {
 
         
-            foreach(int size in RiverSizes.RiverSizesFind())
-            {
-                Console.WriteLine(size);
-            }
+          
+                Console.WriteLine(LevenshteinDistance.Change());
+            
             
         }
     }

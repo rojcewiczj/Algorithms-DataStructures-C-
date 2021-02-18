@@ -6,48 +6,58 @@ namespace AlgorithmsCsharp.Arrays
 {
     public class LevenshteinDistance
     {
-        public static string str1 = "abc";
+        public static string str1 = "biting";
 
-        public static string str2 = "yabd";
+        public static string str2 = "mitten";
 
         public static int Change()
         {
             // returns the amount of changes needed to make them the same (insert, delete, change)
 
             int[] needed_changes = new int[str2.Length];
-
+            int count = 0;
             if(str1.Length == 0 && str2.Length > 0)
             {
                 return str2.Length;
             }
             if(str1.Length ==0 && str2.Length == 0)
             {
-                return 0;
+                return count;
             }
-
-            int i = 0;
-            int j = 0;
-
-            while(i < str2.Length)
+            count = str2.Length;
+            Dictionary<char, int> dicti = new Dictionary<char, int>();
+            
+            foreach(char letter in str2)
             {
-                if(str1[i] != str2[j])
+                if (!dicti.ContainsKey(letter))
                 {
-                    i += 1;
+                    dicti[letter] = 1;
+
                 }
                 else
                 {
-                    needed_changes[i] = 1;
-                    i += 1;
-                    j += 1;
+                    dicti[letter] += 1;
                 }
-            }
-              
-            foreach(int spot in needed_changes)
-            {
-                Console.WriteLine(spot);
+                  
             }
 
-            return 0;
+            foreach(char letter in str1)
+            {
+                if (dicti.ContainsKey(letter))
+                {
+                    dicti[letter] -= 1;
+                    if(dicti[letter] <= 0)
+                    {
+                        dicti.Remove(letter);
+                    }
+                    count -= 1;
+                }
+                
+            }
+
+            Console.WriteLine(count);
+            return count;
+            
         }
     }
 }
