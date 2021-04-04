@@ -33,13 +33,61 @@ namespace AlgorithmsCsharp.DataStructures
             return sizes;
         }
 
-        public static traverseNode(int x, int y, int[,] matrix, List<int> sizes)
+        public static void traverseNode(int x, int y, int[,] matrix, bool[,] visited, List<int> sizes)
         {
             int currentRiverSize = 0;
-            List<List<int>> nodesToExplore = new List<List<int>>();
+            Stack<List<int>> nodesToExplore = new Stack<List<int>>();
             List<int> firstToExplore = new List<int>() { x, y };
-            nodesToExplore.Add(firstToExplore);
+            nodesToExplore.Push(firstToExplore);
+            while(nodesToExplore.Count > 0)
+            {
+                List<int> currentNode = nodesToExplore.Pop();
+                x = currentNode[0];
+                y = currentNode[1];
+                if (!visited[x, y])
+                    visited[x, y] = true;
+                    if (matrix[x,y] == 1)
+                    {
+                    currentRiverSize += 1;
+                    List<List<int>> unvisitedNeighbors = getUnvisitedNeighbors(x, y,  matrix, visited);
+                    foreach(List<int> neighbor in unvisitedNeighbors)
+                        {
+                        nodesToExplore.Push(neighbor);
+                        }
+                    }
 
+
+            }
+
+            if (currentRiverSize > 0)
+            {
+                sizes.Add(currentRiverSize);
+            }
+
+
+        }
+
+        public static List<List<int>> getUnvisitedNeighbors(int x, int y, int[,] matrix, bool[,] visited)
+        {
+            List<List<int>> unvisitedNeighbors = new List<List<int>>();
+            if (x > 0 && !visited[x - 1, y])
+            {
+                unvisitedNeighbors.Add(new List<int>() { x - 1, y });
+            }
+            if (x < matrix.GetLength(0) - 1 && !visited[x + 1, y])
+            {
+                unvisitedNeighbors.Add(new List<int>() { x + 1, y });
+            }
+            if (y > 0  && !visited[x , y -1])
+            {
+                unvisitedNeighbors.Add(new List<int>() { x , y - 1});
+            }
+            if (y < matrix.GetLength(1) - 1 && !visited[x , y + 1])
+            {
+                unvisitedNeighbors.Add(new List<int>() { x , y + 1 });
+            }
+
+            return unvisitedNeighbors;
 
         }
     }
