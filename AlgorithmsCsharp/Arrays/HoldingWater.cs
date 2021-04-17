@@ -5,8 +5,8 @@ using System.Text;
 namespace AlgorithmsCsharp.Arrays
 {
    public class HoldingWater
-    {
-       public static int[] heights = new int[10];
+	{
+	   public static int[] heights = new int[10];
 
 
 		public static int WaterArea(int[] heights)

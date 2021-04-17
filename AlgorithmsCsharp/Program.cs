@@ -14,7 +14,8 @@ namespace AlgorithmsCsharp
         static void Main(string[] args)
         {
 
-            OpenSesame.find();
+            LevDistance levy = new LevDistance("abc", "yabd");
+            Console.WriteLine( levy.LevenshteinDistance());
             
             
         }
