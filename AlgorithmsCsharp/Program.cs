@@ -13,9 +13,7 @@ namespace AlgorithmsCsharp
 
         static void Main(string[] args)
         {
-
-            LevDistance levy = new LevDistance("abc", "yabd");
-            Console.WriteLine( levy.LevenshteinDistance());
+            Console.WriteLine(AlgosBuyAndSell.BuyAndSell(new int[10] { 22, 13, 15, 45, 3, 48, 9, 14, 50, 80 }));
             
             
         }
