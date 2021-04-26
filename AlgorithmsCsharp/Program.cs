@@ -13,15 +13,10 @@ namespace AlgorithmsCsharp
 
         static void Main(string[] args)
         {
-            int[] arr = { 12, 11, 13, 5, 6, 7 };
-            Console.WriteLine("Given Array");
-            MergeSort.printArray(arr);
-            MergeSort.sort(arr, 0, arr.Length - 1);
-            Console.WriteLine("\nSorted array");
-            MergeSort.printArray(arr);
-            
-            //stack
-            // sort(sort left, sort right, merge)
+            MinNumCoinsForChange mini = new MinNumCoinsForChange(7, new int[3]{ 1, 5, 10 });
+
+            Console.WriteLine(mini.Find());
+
         }
     }
 }
