@@ -13,9 +13,12 @@ namespace AlgorithmsCsharp
 
         static void Main(string[] args)
         {
-            MinNumCoinsForChange mini = new MinNumCoinsForChange(7, new int[3]{ 1, 5, 10 });
+            test newTest = new test("john");
 
-            Console.WriteLine(mini.Find());
+            newTest.changeName();
+
+
+           
 
         }
     }
